@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Bakgrund till notifikationen som uppstår när nya meddelanden mottages -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#FFE91E63" />
+    <corners android:topRightRadius="10dp" android:radius="10dp" />
+</shape>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Messaging</string>
+    <string name="join_button">Join</string>
+    <string name="send_button">Send</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="simple_messaging">Simple Messaging</string>
+    <string name="input_server_port">Input server port..</string>
+    <string name="input_username">3-14 characters</string>
+    <string name="input_password">8-20 characters</string>
+    <string name="textview">TextView</string>
+    <string name="save_information">Save information</string>
+    <string name="type_a_message">Type a message..</string>
+    <string name="password">Password</string>
+    <string name="input_host_address">Input host address..</string>
+    <string name="server_port">Server port</string>
+    <string name="username">Username</string>
+    <string name="server_address">Server address</string>
+</resources>

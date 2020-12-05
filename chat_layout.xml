@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Chattens layout som består av en TextView (chat_text) som agerar behållare och begränsare för RecyclerView (recyclerView), ett EditText (chat_edit) fält som används för att skriva in meddelanden som ska skickas, och en knapp (send_button) som skickar meddelandet.
+     recyclerView begränsas av chat_text med constraints och görs scrollbar med android:scrollbars attributet. -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <TextView
+        android:id="@+id/chat_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:autoLink="web"
+        android:background="@drawable/chat_input_border"
+        android:gravity="bottom"
+        android:linksClickable="true"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:shadowColor="@color/dropShadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#15E415"
+        android:textColorHint="#4E3E3E"
+        android:textColorLink="#0983FF"
+        android:textSize="15sp"
+        app:fontFamily="@font/martel_sans_semibold"
+        app:layout_constraintBottom_toTopOf="@+id/chat_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_bg"
+        android:onClick="sendMessage"
+        android:text="@string/send_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/chat_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/chat_input_border"
+        android:ems="10"
+        android:hint="@string/type_a_message"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:shadowColor="@color/dropShadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textColor="#F8F6F6"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#0983FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/send_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/chat_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
